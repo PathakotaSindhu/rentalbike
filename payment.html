@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <style>
+        body {
+            background-image: url('paybg.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            color: white; /* White color for all text */
+        }
+
+        h1, h2 {
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Added text shadow for better readability */
+        }
+
+        a {
+            color: #4CAF50; /* Bright green for links */
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        div {
+            display: inline-block;
+            text-align: left;
+            border: 2px solid #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.3); /* White glow effect */
+            background-color: rgba(0, 0, 0, 0.5); /* Slight dark overlay for better text readability */
+        }
+
+        fieldset {
+            border: none;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        select, input[type="text"], input[type="checkbox"] {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            background-color: rgba(255, 255, 255, 0.8); /* Light background for inputs */
+            color: #000; /* Black text for inputs */
+        }
+
+        button {
+            padding: 12px 24px;
+            background-color: #ff9800; /* Bright orange button */
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #e68900; /* Darker shade on hover */
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body style="text-align: center;">
+
+    <h1>Payment</h1>
+
+    <div>
+        <form action="success.html" method="post" style="width: 500px;">
+            <fieldset>
+                <legend>Payment Details</legend>
+
+                <label for="bike">Select Bike:</label><br>
+                <select id="bike" name="bike" required>
+                    <option value="bullet-bike">Bullet Bike - Rs/-2000/day</option>
+                    <option value="electric-bike">Electric Bike - Rs/-1000/day</option>
+                    <option value="herohonda-bike">Herohonda Bike - Rs/-500/day</option>
+                    <option value="tvssports-bike">Tvssports Bike - Rs/-600/day</option>
+                    <option value="mountain-bike">Mountain Bike - Rs/-900/day</option>
+                    <option value="pulsar-bike">Pulsar Bike - Rs/-700/day</option>
+                    <option value="sports-bike">Sports Bike - Rs/-800/day</option>
+                    <option value="fat-herohonda-bike">Fat Herohonda Bike - Rs/-1000/day</option>
+                </select><br><br>
+
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" required><br><br>
+
+                <label for="card-number">Card Number:</label><br>
+                <input type="text" id="card-number" name="card-number" pattern="\d{16}" placeholder="1234 5678 9012 3456" required><br><br>
+
+                <label for="expiry-date">Expiry Date:</label><br>
+                <input type="text" id="expiry-date" name="expiry-date" pattern="\d{2}/\d{2}" placeholder="MM/YY" required><br><br>
+
+                <label for="cvv">CVV:</label><br>
+                <input type="text" id="cvv" name="cvv" pattern="\d{3}" placeholder="123" required><br><br>
+
+                <label for="amount">Amount:</label><br>
+                <input type="text" id="amount" name="amount" placeholder="Rs/-" required><br><br>
+
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms">I agree to the <a href="#terms-conditions">terms and conditions</a></label><br><br>
+
+                <button type="submit">Submit Payment</button>
+            </fieldset>
+        </form>
+    </div>
+
+    <h2 id="terms-conditions">Terms and Conditions</h2>
+    <p>By making a payment, you agree to the following terms and conditions:</p>
+    <ul>
+        <li>Payment is non-refundable.</li>
+        <li>Rental fees are charged per day.</li>
+        <li>The bike must be returned in the same condition as it was rented.</li>
+        <li>Late returns may incur additional charges.</li>
+        <li>All personal information provided will be kept confidential and secure.</li>
+    </ul>
+
+    <a href="index.html">Back to Home</a>
+
+</body>
+</html>

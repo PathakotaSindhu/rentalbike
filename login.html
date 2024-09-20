@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url('image.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+        }
+
+        /* Semi-transparent overlay for a slightly dimmed background */
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Dark transparent overlay */
+            z-index: -1; /* Ensures overlay is behind the form */
+        }
+
+        /* Transparent login form styling */
+        .login-container {
+            background-color: rgba(255, 255, 255, 0.2); /* Transparent background for the form */
+            border: 2px solid rgba(255, 255, 255, 0.3); /* Light border with transparency */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Adds a shadow for better visibility */
+            text-align: center;
+            width: 400px;
+        }
+
+        h2 {
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        label, input {
+            color: white;
+            width: 100%;
+            text-align: left;
+        }
+
+        input {
+            background-color: rgba(255, 255, 255, 0.2); /* Transparent input fields */
+            border: 1px solid rgba(255, 255, 255, 0.5); /* Light transparent border */
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+            color: white;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: rgba(76, 175, 80, 0.8); /* Semi-transparent button */
+            color: white;
+            cursor: pointer;
+            margin: 10px 0;
+        }
+
+        button:hover {
+            background-color: rgba(76, 175, 80, 1); /* Fully opaque on hover */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Overlay for a dimmed transparent effect -->
+    <div class="overlay"></div>
+
+    <!-- Transparent Login Form -->
+    <div class="login-container">
+        <h2>Login</h2>
+
+        <form action="pages/bikes.html" method="get">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required><br>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br>
+
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+</body>
+</html>
